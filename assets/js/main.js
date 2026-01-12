@@ -25,7 +25,7 @@ const revealIO = new IntersectionObserver((entries) => {
       revealIO.unobserve(e.target);
     }
   });
-}, { threshold: 0.12 });
+}, { threshold: 0.14 });
 
 document.querySelectorAll(".reveal").forEach(el => revealIO.observe(el));
 
@@ -37,20 +37,19 @@ const playIO = new IntersectionObserver((entries) => {
     const el = entry.target;
 
     if (entry.isIntersecting) {
-      // Force reflow to restart CSS animations reliably
+      // restart animations
       el.classList.remove("play");
       void el.offsetWidth;
       el.classList.add("play");
 
-      // Optional: remove play after 6s so the section stays static
-      // (animations already run once, but this ensures no accidental re-trigger)
+      // remove after a while so everything stays still
       window.clearTimeout(el.__playTimeout);
       el.__playTimeout = window.setTimeout(() => {
         el.classList.remove("play");
       }, 6000);
 
     } else {
-      // When section leaves viewport: reset so it can play again when you scroll back
+      // reset so it can replay when scrolling back
       window.clearTimeout(el.__playTimeout);
       el.classList.remove("play");
     }
@@ -59,14 +58,17 @@ const playIO = new IntersectionObserver((entries) => {
 
 playSections.forEach(s => playIO.observe(s));
 
-// Subtle magnet hover effect on floating icons (desktop)
+// Gentle magnet hover (desktop only) for floating icons
 const floats = document.querySelectorAll(".float");
 floats.forEach(el => {
   el.addEventListener("mousemove", (e) => {
+    // ignore on touch devices
+    if (window.matchMedia("(pointer: coarse)").matches) return;
+
     const r = el.getBoundingClientRect();
     const x = (e.clientX - r.left - r.width / 2) / r.width;
     const y = (e.clientY - r.top - r.height / 2) / r.height;
-    el.style.transform = `translate(${x * 6}px, ${y * 6}px) scale(1.03)`;
+    el.style.transform = `translate(${x * 5}px, ${y * 5}px) scale(1.03)`;
   });
 
   el.addEventListener("mouseleave", () => {
