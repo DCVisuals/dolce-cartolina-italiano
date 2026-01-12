@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dolce Cartolina — Kurs języka włoskiego</title>
+  <meta name="description" content="Lekcje włoskiego online A1–C2. Konwersacje, matura, egzaminy CILS/CELI/PLIDA. Dolce Cartolina — Eliza Giussani." />
+  <meta name="theme-color" content="#0b7f5e" />
+
+  <!-- Fonts (simple, premium look) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Retour en haut">
+      <span class="brand__flag" aria-hidden="true">🇮🇹</span>
+      <span class="brand__text">
+        <strong>DOLCE CARTOLINA</strong>
+        <small>Kurs języka włoskiego</small>
+      </span>
+    </a>
+
+    <button class="burger" aria-label="Otwórz menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" aria-label="Nawigacja">
+      <a href="#o-mnie">O mnie</a>
+      <a href="#oferta">Oferta</a>
+      <a href="#metoda">Metoda</a>
+      <a href="#cennik">Cennik</a>
+      <a href="#kontakt" class="nav__cta">Kontakt</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <div class="bubbles reveal">
+            <span class="bubble">
+              <img src="assets/icons/chat.svg" alt="" aria-hidden="true">
+              Ciao!
+            </span>
+            <span class="bubble bubble--accent">
+              Parliamo Italiano?
+            </span>
+          </div>
+
+          <h1 class="reveal">Nauczę Cię mówić po włosku.</h1>
+          <p class="lead reveal">
+            Lekcje online A1–C2 — konwersacje, matura, egzaminy CILS / CELI / PLIDA.
+            Minimalistycznie, skutecznie, krok po kroku.
+          </p>
+
+          <div class="hero__cta reveal">
+            <a class="btn" href="#kontakt">Skontaktuj się</a>
+            <a class="btn btn--ghost" href="#oferta">Zobacz ofertę</a>
+          </div>
+
+          <div class="badges reveal" aria-label="Atuty">
+            <div class="badge">Indywidualnie</div>
+            <div class="badge">Online</div>
+            <div class="badge">Mówienie + słuchanie</div>
+          </div>
+        </div>
+
+        <div class="hero__visual reveal">
+          <div class="photo">
+            <img src="assets/img/hero.jpg" alt="Dolce Cartolina — lekcje włoskiego" />
+          </div>
+
+          <!-- floating icons -->
+          <div class="float float--1" aria-hidden="true">
+            <img src="assets/icons/colosseum.svg" alt="" />
+          </div>
+          <div class="float float--2" aria-hidden="true">
+            <img src="assets/icons/pasta.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- O MNIE -->
+    <section id="o-mnie" class="section section--alt">
+      <div class="container grid grid--2">
+        <div class="reveal">
+          <h2>O mnie</h2>
+          <p class="muted">
+            Nazywam się Eliza Giussani. Uczę języka włoskiego od wielu lat.
+            Pomagam uczniom przełamać blokadę w mówieniu i budować solidne podstawy.
+          </p>
+
+          <div class="chips">
+            <span class="chip">A1–C2</span>
+            <span class="chip">Konwersacje</span>
+            <span class="chip">Matura</span>
+            <span class="chip">CILS / CELI / PLIDA</span>
+          </div>
+        </div>
+
+        <div class="card photo2 reveal">
+          <img src="assets/img/eliza.jpg" alt="Eliza Giussani" />
+        </div>
+      </div>
+    </section>
+
+    <!-- OFERTA -->
+    <section id="oferta" class="section">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Oferta</h2>
+          <p class="muted">Prosto i konkretnie — wybierz cel, a ja dopasuję ścieżkę.</p>
+        </div>
+
+        <div class="grid grid--3">
+          <div class="card reveal">
+            <h3>A1–C2</h3>
+            <p>Nauka od zera po zaawansowany poziom. Stabilny postęp bez chaosu.</p>
+          </div>
+          <div class="card reveal">
+            <h3>Konwersacje</h3>
+            <p>Rozmowy + słuchanie. Tematy codzienne, praca, podróże.</p>
+          </div>
+          <div class="card reveal">
+            <h3>Egzaminy</h3>
+            <p>CILS / CELI / PLIDA — strategia, struktura, ćwiczenia.</p>
+          </div>
+          <div class="card reveal">
+            <h3>Matura</h3>
+            <p>Podstawowa i rozszerzona — prowadzenie krok po kroku.</p>
+          </div>
+          <div class="card reveal">
+            <h3>Uczelnia</h3>
+            <p>Wsparcie w zaliczeniach, egzaminach, pisaniu.</p>
+          </div>
+          <div class="card reveal">
+            <h3>Materiał</h3>
+            <p>Podręczniki + autorskie zasoby, dobra organizacja nauki.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- METODA -->
+    <section id="metoda" class="section section--alt">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Metoda</h2>
+          <p class="muted">Lekko, ale solidnie: mówienie i rozumienie jako fundament.</p>
+        </div>
+
+        <div class="grid grid--2">
+          <div class="card reveal">
+            <h3>Struktura lekcji (60 min)</h3>
+            <ul class="list">
+              <li>5–10 min: rozgrzewka + powtórka</li>
+              <li>~45 min: praca główna (cel + materiał)</li>
+              <li>5 min: podsumowanie + plan na dalej</li>
+            </ul>
+          </div>
+
+          <div class="card reveal">
+            <h3>Co dostajesz</h3>
+            <ul class="list">
+              <li>Notatki i plan nauki</li>
+              <li>Ćwiczenia dobrane do poziomu</li>
+              <li>Jasną ścieżkę postępu</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CENNIK -->
+    <section id="cennik" class="section">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Cennik</h2>
+          <p class="muted">Wpisz tutaj Twoje ceny — w 3 kartach, czytelnie.</p>
+        </div>
+
+        <div class="grid grid--3">
+          <div class="card price reveal">
+            <h3>Indywidualne</h3>
+            <p class="price__value">150 zł</p>
+            <p class="muted">60 minut</p>
+          </div>
+          <div class="card price reveal">
+            <h3>Grupowe</h3>
+            <p class="price__value">90 zł</p>
+            <p class="muted">od osoby / 60 minut</p>
+          </div>
+          <div class="card price reveal">
+            <h3>Egzaminy</h3>
+            <p class="price__value">180 zł</p>
+            <p class="muted">60 minut</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAKT -->
+    <section id="kontakt" class="section section--cta">
+      <div class="container">
+        <div class="cta reveal">
+          <h2>Kontakt</h2>
+          <p class="muted">
+            Napisz krótko: poziom, cel i dostępność. Odpowiem z propozycją.
+          </p>
+
+          <div class="cta__row">
+            <!-- Remplace email/phone -->
+            <a class="btn" href="mailto:hello@example.com">E-mail</a>
+            <a class="btn btn--ghost" href="https://wa.me/XXXXXXXXXXX" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+
+          <p class="fineprint">© <span id="year"></span> Dolce Cartolina</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
