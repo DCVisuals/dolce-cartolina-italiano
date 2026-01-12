@@ -17,19 +17,49 @@ if (burger && nav) {
   });
 }
 
-// Reveal on scroll (fade-in)
-const io = new IntersectionObserver((entries) => {
+// Reveal on scroll
+const revealIO = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (e.isIntersecting) {
       e.target.classList.add("is-in");
-      io.unobserve(e.target);
+      revealIO.unobserve(e.target);
     }
   });
 }, { threshold: 0.12 });
 
-document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+document.querySelectorAll(".reveal").forEach(el => revealIO.observe(el));
 
-// Subtle magnet hover effect on floating icons (desktop only)
+// Play animations on enter (2–5s then stop) + reset on leave
+const playSections = document.querySelectorAll(".section-play");
+
+const playIO = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    const el = entry.target;
+
+    if (entry.isIntersecting) {
+      // Force reflow to restart CSS animations reliably
+      el.classList.remove("play");
+      void el.offsetWidth;
+      el.classList.add("play");
+
+      // Optional: remove play after 6s so the section stays static
+      // (animations already run once, but this ensures no accidental re-trigger)
+      window.clearTimeout(el.__playTimeout);
+      el.__playTimeout = window.setTimeout(() => {
+        el.classList.remove("play");
+      }, 6000);
+
+    } else {
+      // When section leaves viewport: reset so it can play again when you scroll back
+      window.clearTimeout(el.__playTimeout);
+      el.classList.remove("play");
+    }
+  });
+}, { threshold: 0.22 });
+
+playSections.forEach(s => playIO.observe(s));
+
+// Subtle magnet hover effect on floating icons (desktop)
 const floats = document.querySelectorAll(".float");
 floats.forEach(el => {
   el.addEventListener("mousemove", (e) => {
